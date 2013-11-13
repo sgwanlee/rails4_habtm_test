@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<%= @zombie.name %>
+<%= @zombie.limbs.count %>
+<% @zombie.limbs.each do |limb| %>
+<%= limb.kind %>
+<% end %>
+
+
+<%= link_to 'Edit', edit_zombie_path(@zombie) %> |
+<%= link_to 'Back', zombies_path %>

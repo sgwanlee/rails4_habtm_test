@@ -1,0 +1,25 @@
+<h1>Listing limbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @limbs.each do |limb| %>
+      <tr>
+        <td><%= link_to 'Show', limb %></td>
+        <td><%= link_to 'Edit', edit_limb_path(limb) %></td>
+        <td><%= link_to 'Destroy', limb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Limb', new_limb_path %>
